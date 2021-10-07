@@ -12,26 +12,26 @@ public class DBConnection {
 		
 		/*final String driverName	= "org.mariadb.jdbc.Driver";*/
 		final String driverName	= "org.mariadb.jdbc.Driver";
-		final String dbURL		= "jdbc:mariadb://221.145.148.151:8888/raspi_db";
-		final String dbUser = "raspi_user";
-		final String dbPass = "topad159@";
+		final String dbURL		= "jdbc:mariadb:/";
+		final String dbUser = "";
+		final String dbPass = "";
 		
 		
 		try {
 			if(con == null){
-			//µå¶óÀÌ¹ö·Îµù
+			//ë“œë¼ì´ë²„ë¡œë”©
 			Class.forName(driverName);
 			con = DriverManager.getConnection(dbURL, 
 					dbUser,
 					dbPass);
 			
-			if( con != null ){ //System.out.println("µ¥ÀÌÅÍ º£ÀÌ½º Á¢¼Ó ¼º°ø"); 
+			if( con != null ){ //System.out.println("ë°ì´í„° ë² ì´ìŠ¤ ì ‘ì† ì„±ê³µ"); 
 				}
 			
 			}
 		}catch(Exception e) {
 			e.printStackTrace();
-			System.out.println("DBConnection :: DB¿¬°á½Ã ¿À·ù "+e.getMessage());
+			System.out.println("DBConnection :: DBì—°ê²°ì‹œ ì˜¤ë¥˜ "+e.getMessage());
 		}
 		
 		return con;
